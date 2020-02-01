@@ -1,0 +1,12 @@
+{
+  "name": "ts-object-parser",
+  "version": "0.0.1",
+  "description": "A parser to handle initialisation of Typescript class functions on the base object and all nested objects.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ross Bratton",
+  "license": "ISC"
+}
