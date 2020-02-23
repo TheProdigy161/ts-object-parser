@@ -1,6 +1,6 @@
 {
   "name": "ts-object-parser",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": ["typescript", "json", "parser"],
   "description": "A parser to handle initialisation of Typescript class functions on the base object and all nested objects.",
   "main": "dist/index.js",
