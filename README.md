@@ -2,13 +2,13 @@
 
 ## Table of Contents
 
-* [Summary](https://www.npmjs.com/package/ts-object-parser#summary)
-* [Getting Started](https://www.npmjs.com/package/ts-object-parser#getting-started)
-	* [Installation](https://www.npmjs.com/package/ts-object-parser#installation)
-	* [Usage](https://www.npmjs.com/package/ts-object-parser#usage)
+* [Summary](##summary)
+* [Getting Started](##getting-started)
+	* [Installation](###installation)
+	* [Usage](###usage)
 	* [ParseObject](https://www.npmjs.com/package/ts-object-parser#parseObject)
-	* [GetTypes](https://www.npmjs.com/package/ts-object-parser#getTypes)
-* [All Done](https://www.npmjs.com/package/ts-object-parser#all-done)
+	* [GetTypes](###getTypes)
+* [All Done](##all-done)
 
 ## Summary
 
