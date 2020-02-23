@@ -8,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
+  "repository": {"url": "https://github.com/TheProdigy161/js-object-parser"},
   "author": "Ross Bratton",
   "license": "ISC"
 }
