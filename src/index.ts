@@ -1,2 +1,2 @@
-export { IJsonParser } from './interfaces/jsonParser';
-export { JsonParser } from "./core/jsonParser";
+export { ITypescriptParser } from './interfaces/typescriptParser';
+export { ParseObject, ParseArray } from "./core/typescriptParser";
