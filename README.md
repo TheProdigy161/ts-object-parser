@@ -2,13 +2,13 @@
 
 ## Table of Contents
 
-* [Summary](##summary)
-* [Getting Started](##getting-started)
-	* [Installation](###installation)
-	* [Usage](###usage)
-	* [ParseObject](https://www.npmjs.com/package/ts-object-parser#parseObject)
-	* [GetTypes](###getTypes)
-* [All Done](##all-done)
+* [Summary](#summary)
+* [Getting Started](#getting-started)
+	* [Installation](#installation)
+	* [Usage](#usage)
+	* [ParseObject](#parseObject)
+	* [GetTypes](#getTypes)
+* [All Done](#all-done)
 
 ## Summary
 
