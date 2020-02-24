@@ -1,3 +1,5 @@
+![](https://github.com/TheProdigy161/js-object-parser/workflows/build/badge.svg)
+
 # Typescript Object Parser
 
 ## Table of Contents
