@@ -28,31 +28,31 @@ For parsing a JSON object to another object, the following is the general setup.
 
 Initialize the data that will be parsed to the object. The variable for the data will usually be setup with an **interface** as the type so that the variables to be added are stated, but this is optional:
 
-	interface  IUserDetails {
+	interface ITestObjectDetails {
 		age: number;
 		dateOfBirth: Date;
 	}
 
-	interface  IUser {
+	interface ITestObject {
 		id: number;
 		firstName: string;
 		lastName: string;
-		userDetails: IUserDetails;
+		details: ITestObjectDetails;
 	}
 
-	let object: IUser = {
-		id:  1,
-		firstName:  "Ross",
-		lastName:  "Bratton",
-		userDetails: {
-			age:  24,
-			dateOfBirth:  new  Date(1995, 7, 19)
+	let object: ITestObject = {
+		id:  12,
+		firstName:  "Peter",
+		lastName:  "Parker",
+		details: {
+			age: 26,
+			dateOfBirth: new Date(1993, 8, 27)
 		}
 	};
 
-Then the object is parsed using the **ParseObject** function by passing the object to be parsed along with the type that it should be parsed to. In this example it will be converting an **IUser** interface to the **User** object:
+Then the object is parsed using the **ParseObject** function by passing the object to be parsed along with the type that it should be parsed to. In this example it will be converting an **ITestObject** interface to the **TestObject**:
 
-	class UserDetails implements IUserDetails {
+	class TestObjectDetails implements ITestObjectDetails {
 		age: number;
 		private _dateOfBirth: Date = new  Date();
 		
@@ -64,9 +64,9 @@ Then the object is parsed using the **ParseObject** function by passing the obje
 		}
 	}
 	
-	class User implements IUser, IJsonParser {
+	class TestObject implements ITestObject, IJsonParser {
 		id: number = 0;
-		userDetails: UserDetails;
+		details: TestObjectDetails;
 		private _firstName: string = "Joe";
 		private _lastName: string = "Bloggs";
 		
@@ -85,12 +85,12 @@ Then the object is parsed using the **ParseObject** function by passing the obje
 		
 		getTypes() {
 			return {
-				userDetails: UserDetails
+				details: TestObjectDetails
 			}
 		}
 	}
 	
-	let parsedObject: User = ParseObject(obj, User);
+	let parsedObject: TestObject = ParseObject(obj, TestObject);
 
 Each custom class that will be used within the parsing process needs to implement the interface **IJsonParser** so make sure that the function **getTypes()** will be implemented as it is required.
 
@@ -101,43 +101,43 @@ Using this method the object will be parsed along with all of the class methods 
 
 First initialize the JSON object that will be parsed: 
 
-	let  array: IUser[] = [
+	let  array: ITestObject[] = [
 		{
-			id:  1,
-			firstName:  "Ross",
-			lastName:  "Bratton",
-			userDetails: {
-				age:  24,
-				dateOfBirth:  new  Date(1995, 7, 19)
+			id: 12,
+			firstName: "Peter",
+			lastName: "Parker",
+			details: {
+				age: 26,
+				dateOfBirth: new Date(1993, 8, 27)
 			}
 		},
 		{
-			id:  2,
-			firstName:  "Joe",
-			lastName:  "Bloggs",
-			userDetails: {
-				age:  40,
-				dateOfBirth:  new  Date(1980, 9, 20)
+			id: 13,
+			firstName: "Mary",
+			lastName: "Jane",
+			details: {
+				age: 26,
+				dateOfBirth: new Date(1993, 8, 18)
 			}
 		}
 	];
 
-Then pass through the array and the type that each element in the array will be. In this example, that will be the **User** type:
+Then pass through the array and the type that each element in the array will be. In this example, that will be the **TestObject** type:
 
-	let userArrayWithParse: User[] = ParseArray(array, User);
+	let parsedArray: TestObject[] = ParseArray(jsonArray, TestObject);
 
-Then an array of **User** will be returned with all of the elements having their functions initialized.
+Then an array of **TestObject** will be returned with all of the elements having their functions initialized.
 
 ### GetTypes
-The **getTypes** is used to specify the type for each complex object. For example on the **User** class the following would be the required function implementation since it implements the class **UserDetails**:
+The **getTypes** is used to specify the type for each complex object. For example on the **TestObject** class the following would be the required function implementation since it implements the class **TestObjectDetails**:
 
 	getTypes() {
 		return {
-			userDetails: UserDetails
+			details: TestObjectDetails
 		}
 	}
 
-When specifying the types the key (**userDetails**) is the name of the variable as it is shown in the user class. Then the value is the type (**UserDetails**) of the variable.
+When specifying the types the key (**details**) is the name of the variable as it is shown in the user class. Then the value is the type (**TestObjectDetails**) of the variable.
 
 If there are no complex objects on the class, then the **IJsonParser** interface does not need to be implemented and the **getTypes** function is not required.
 
