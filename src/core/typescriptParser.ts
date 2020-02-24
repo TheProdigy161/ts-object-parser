@@ -1,5 +1,5 @@
 //Using the obj provided recreates the data from this, into the new object.
-export function ParseObject(obj, type): any {
+export function ParseObject<S, T>(obj: S, type): T {
     //Create JSON object using the json provided.
     //Stringify object being passed.
     let json: string = JSON.stringify(obj);
@@ -31,9 +31,9 @@ export function ParseObject(obj, type): any {
 }
 
 //Takes an array of objects and parses 
-export function ParseArray(array, type): any[] {
+export function ParseArray<S, T>(array: S[], type): T[] {
     //Create the array to be passed back.
-    let newArray = [];
+    let newArray: T[] = [];
 
     //Loop through JSON object and assign parameters/create complex objects.
     for (let index in array) {
