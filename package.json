@@ -14,7 +14,7 @@
     "build": "tsc"
   },
   "repository": {
-    "url": "https://github.com/TheProdigy161/js-object-parser"
+    "url": "https://github.com/TheProdigy161/ts-object-parser"
   },
   "author": "Ross Bratton",
   "license": "ISC",
