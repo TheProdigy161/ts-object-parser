@@ -1,6 +1,6 @@
 {
   "name": "ts-object-parser",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "keywords": [
     "typescript",
     "json",
@@ -26,5 +26,5 @@
     "ts-node": "^8.6.2",
     "typescript": "^3.8.2"
   },
-  "publishConfig": { "registry": "https://www.npmjs.com/package/ts-object-parser" }
+  "publishConfig": { "registry": "https://registry.npmjs.org" }
 }
