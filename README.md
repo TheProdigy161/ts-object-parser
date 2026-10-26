@@ -1,4 +1,5 @@
-![](https://github.com/TheProdigy161/js-object-parser/workflows/build/badge.svg)
+[![build](https://github.com/TheProdigy161/ts-object-parser/actions/workflows/build.yml/badge.svg)](https://github.com/TheProdigy161/ts-object-parser/actions/workflows/build.yml)
+[![npm](https://img.shields.io/npm/v/ts-object-parser)](https://www.npmjs.com/package/ts-object-parser)
 
 # Typescript Object Parser
 
